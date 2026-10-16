@@ -4,10 +4,119 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>許少龍的網站</title>
+  <meta name="description" content="許少龍的筆記與研究整理">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --line: #e7e5e4;
+      --hover: #f0efed;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --text: #f5f5f4;
+        --muted: #a8a29e;
+        --line: #2a2a2a;
+        --hover: #1f1f1f;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 96px 20px 64px;
+    }
+    header { margin-bottom: 64px; }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .intro {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    ul { list-style: none; border-top: 1px solid var(--line); }
+    li { border-bottom: 1px solid var(--line); }
+    li a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    li a:hover { background: var(--hover); }
+    .title { font-size: 17px; font-weight: 500; }
+    .desc { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+    .arrow {
+      color: var(--muted);
+      transition: transform 0.15s ease;
+      flex-shrink: 0;
+    }
+    li a:hover .arrow { transform: translateX(4px); color: var(--text); }
+    footer {
+      margin-top: 80px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>這是我的第一個上線網站。</p>
-  <p><a href="https://claude.ai/code/artifact/98ceff9f-b7ab-4a49-aaaa-8a0df4854d4b?via=auto_preview" target="_blank">private market update</a></p>
+  <main>
+    <header>
+      <h1>許少龍</h1>
+      <p class="intro">投資研究與學習筆記。</p>
+    </header>
+
+    <section>
+      <p class="label">Notes</p>
+      <ul>
+        <li>
+          <a href="https://claude.ai/code/artifact/98ceff9f-b7ab-4a49-aaaa-8a0df4854d4b" target="_blank" rel="noopener">
+            <span>
+              <span class="title">Private Market Update</span>
+              <span class="desc">私募市場動態與產業觀察</span>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://claude.ai/artifact/TSCKbMBv58Fm8xfTcU3fAv" target="_blank" rel="noopener">
+            <span>
+              <span class="title">股癌筆記</span>
+              <span class="desc">Podcast 重點整理</span>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>© 2026 許少龍</footer>
+  </main>
 </body>
 </html>
